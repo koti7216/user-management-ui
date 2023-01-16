@@ -6,6 +6,7 @@ import HeadeComponent from './components/HeadeComponent';
 import FooterComponent from './components/FooterComponent';
 import CreateEmploye from './components/CreateEmploye';
 import UpdateEmploye from './components/UpdateEmploye';
+import DeleteEmp from './components/DeleteEmp';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                   <Route path='/employe' element={<ListEmploye/>}></Route>
                   <Route path='/add-employe' element={<CreateEmploye/>}></Route>
                   <Route path='/update-employe/:id' element={<UpdateEmploye/>}></Route>
+                  <Route path='/delete-employe/:id' element={<DeleteEmp/>}></Route>
                 </Routes>
               </div>
             <FooterComponent /> 

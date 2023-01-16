@@ -7,7 +7,7 @@ class ListEmploye extends Component {
         super(props)
         this.state={employees:[]}
         this.editEmploye=this.editEmploye.bind(this);
-        
+        this.deleteEmploye=this.deleteEmploye.bind(this);
     }
      
     componentDidMount(){
@@ -17,6 +17,9 @@ class ListEmploye extends Component {
     }
     editEmploye(id){
         this.props.navigate(`/update-employe/${id}`);
+    }
+    deleteEmploye(id){
+        this.props.navigate(`/delete-employe/${id}`);
     }
     
     
@@ -42,6 +45,7 @@ class ListEmploye extends Component {
                                 <tr key={employe.eid}>
                                     <td>{employe.ename}</td>
                                     <td><button onClick={()=>this.editEmploye(employe.eid)} className="btn btn-info">Update</button></td>
+                                    <td><button onClick={()=>this.deleteEmploye(employe.eid)} className="btn btn-danger">Delete</button></td>
                                 </tr>
 
                             )}

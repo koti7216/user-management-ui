@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Naviga from './Naviga';
-import EmployeService from '../service/EmployeService';
 import { withRouter } from './withRouter';
+import EmployeService from '../service/EmployeService';
+import Naviga from './Naviga';
 
-class UpdateEmploye extends Component {
+class DeleteEmp extends Component {
     constructor(props){
         super(props)
         this.state={
@@ -11,7 +11,7 @@ class UpdateEmploye extends Component {
             ename:''
         }
         this.changeFirstNameHandler=this.changeFirstNameHandler.bind(this);
-        this.updateEmploye=this.updateEmploye.bind(this);    
+        this.delEmploye=this.delEmploye.bind(this);    
     }
     componentDidMount(){
         EmployeService.getEmployeById(this.state.eid.id).then(res=>{
@@ -24,12 +24,12 @@ class UpdateEmploye extends Component {
     changeFirstNameHandler(event){
         this.setState({ename:event.target.value})
     }
-    updateEmploye(e){
+    delEmploye(e){
         e.preventDefault();
         let employe={ename:this.state.ename};
-        EmployeService.updateEmp(employe,this.state.eid.id).then(_res=>
+        EmployeService.deleteEmploye(this.state.eid.id).then(_res=>
         this.props.UseNav("/employe"));
-        
+        console.log(employe);
     }
     render() {
         return (
@@ -37,7 +37,7 @@ class UpdateEmploye extends Component {
                <div className='container'>
                   <div className='row'>
                     <div className='card col-md-6 offset-md-3 offset-md-3'>
-                        <h3 className='text-center'>Update Employe</h3>
+                        <h3 className='text-center'>Delete Employe</h3>
                         <div className='card-body'>
                             <form>
                                 <div className='form-group'>
@@ -45,7 +45,7 @@ class UpdateEmploye extends Component {
                                     <input placeholder='First Name' name="ename" className='form-control' 
                                     value={this.state.ename} onChange={this.changeFirstNameHandler}/>
                                 </div>
-                                <button className='btn btn-success' onClick={this.updateEmploye}>Update</button>
+                                <button className='btn btn-success' onClick={this.delEmploye}>Delete</button>
                                 <Naviga/>
                             </form>
                         </div>
@@ -57,4 +57,4 @@ class UpdateEmploye extends Component {
     }
 }
 
-export default withRouter(UpdateEmploye);
+export default withRouter(DeleteEmp);
