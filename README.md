@@ -1,7 +1,8 @@
-# Getting Started with Create React App
+# Employe Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Here is the first page looks like......
+![Screenshot 2023-03-05 at 8 15 24 PM](https://user-images.githubusercontent.com/97489851/223000289-b90a9b13-c2d1-4415-aae9-55a006f56b92.png)
+For now there are no restrictions, everyone can edit( delete, update) employes... By using okta roles we can restrict and give permission to only authorized people.
 ## Available Scripts
 
 In the project directory, you can run:
