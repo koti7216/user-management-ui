@@ -2,6 +2,11 @@
 
 Here is the first page looks like......
 ![Screenshot 2023-03-05 at 8 15 24 PM](https://user-images.githubusercontent.com/97489851/223000289-b90a9b13-c2d1-4415-aae9-55a006f56b92.png)
+## UPDATE PAGE
+![Screenshot 2023-03-05 at 8 41 21 PM](https://user-images.githubusercontent.com/97489851/223001181-6bdcc51b-932c-4609-b108-bf74cdb51852.png)
+## DELETE PAGE
+![Screenshot 2023-03-05 at 8 41 33 PM](https://user-images.githubusercontent.com/97489851/223001219-1c702ba4-3d92-4dda-a38a-40273bc834ca.png)
+## INFO
 For now there are no restrictions, everyone can edit( delete, update) employes... By using okta roles we can restrict and give permission to only authorized people.
 ## Available Scripts
 
