@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const Employe_get_url="http://localhost:9090/1st/3rd";
-const Employe_post_url="http://localhost:9090/1st/2nd";
-const Employe_getId_url="http://localhost:9090/1st/6th";
-const Employe_putId_url="http://localhost:9090/1st/4th";
-const Employe_delete_url="http://localhost:9090/1st/5th";
+const Employe_get_url="http://localhost:9091/1st/3rd";
+const Employe_post_url="http://localhost:9091/1st/2nd";
+const Employe_getId_url="http://localhost:9091/1st/6th";
+const Employe_putId_url="http://localhost:9091/1st/4th";
+const Employe_delete_url="http://localhost:9091/1st/5th";
 
 
 class EmployeService{
