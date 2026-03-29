@@ -45,5 +45,4 @@ class CreateEmploye extends Component {
         );
     }
 }
-
 export default SaveEmploye(CreateEmploye);
